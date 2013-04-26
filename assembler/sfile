@@ -1,0 +1,45 @@
+jmp start
+var1: equ 3
+var2: db 10, 2
+var3: ds 3
+lxi h, x
+mov A, m
+lxi h, y
+mov B, m
+sta temp
+mvi A, 0
+add C
+add B
+mov C, A
+lda temp
+start: nop
+mvi A, 20
+lxi h, var2
+mov B, m
+sta temp
+mvi A, 0
+lxi h, var2
+add m
+lxi h, var2+1
+sub m
+sta var2
+lda temp
+add b
+sta temp
+lxi h, var2
+mov A, m
+sta var3+5
+lda temp
+lxi h, var2
+mov A, m
+lxi h, var1
+mov B, m
+sta temp
+mvi A, 0
+add C
+add B
+mov C, g1
+lda temp
+hlt
+GLOBAL g1 db 3,4,5
+temp: ds 0
