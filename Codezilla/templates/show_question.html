@@ -1,0 +1,27 @@
+{% extends "header.html" %}
+{% block body %} 
+<div style="margin:100px">
+</div>
+<div class="container">
+	<div class="page-header" >
+		<h3 >{{ question.question_name }} | {{ contest.name }} </h3>
+	</div>
+	<p > <b>Description : </b> {{ question.question_string }} </p>
+	<p > <b>Sample Test Case : </b> {{ question.question_name }} </p>
+	<hr> <h3>Submit Code</h3>
+	<hr>
+	<form method='POST'>
+		<div id="editor" class="container" style="position:absolute; top: 100;
+        right: 0;
+        bottom: 0;
+        left: 0;">function foo(items) {
+	    var x = "All this is syntax highlighted";
+	    return x;
+		}
+		</div>	
+		code: <textarea name='code'></textarea><br>
+		lang: <input type='text' value='c' name='lang' />
+		<input type='submit' value="asda"> 
+		</form>
+</div><!-- /.tabbable --> 
+{% endblock %}
